@@ -1,0 +1,18 @@
+import { StyleSheet, Image, View } from 'react-native'
+import React from 'react'
+
+export default function AddScreen({ routes = { params: { image: '' } } }) {
+
+    const { image } = routes.params;
+
+    return (
+        <View>
+            <Image
+                source={{ uri: image }}
+                style={{ width: 200, height: 200 }}
+            />
+        </View>
+    )
+}
+
+const styles = StyleSheet.create({})

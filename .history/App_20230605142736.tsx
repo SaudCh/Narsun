@@ -9,8 +9,6 @@ export default function App() {
       primary: '#FF5733',
       secondary: '#3333FF',
     },
-    roundess: 2,
-    
   };
 
   return (

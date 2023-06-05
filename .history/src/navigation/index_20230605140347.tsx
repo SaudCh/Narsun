@@ -1,0 +1,28 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import * as React from 'react';
+
+import HomeScreen from '../screens/home';
+import AddScreen from '../screens/images/add';
+import DetailsScreen from '../screens/images/details';
+
+const Stack = createNativeStackNavigator();
+
+function AppNavigation() {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="AddScreen" component={AddScreen}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+                <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+}
+
+export default AppNavigation;
